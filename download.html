@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>PokerOK - скачать бесплатно | Официальный сайт Pokerok gg</title>
+    <meta name="description" content="Покерок скачать с официального сайта версию для Windows (ПК), macOS, iOS и Android. Быстрая установка, играйте с промокодом POKER2026 | Скачать покерок">
+    <meta name="keywords" content="скачать pokerok, покерок скачать, pokerok клиент, pokerok для windows, pokerok для андроид, pokerok для iphone, скачать покерок на пк">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        /* Общие стили для страницы */
+        :root {
+            --primary-color: #40e0d0;
+            --secondary-color: #2ecc71;
+            --dark-bg: #0a0e17;
+            --card-bg: rgba(30, 40, 62, 0.9);
+            --text-light: #ffffff;
+            --text-gray: #b0b0b0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Навигация */
+        .main-nav {
+            background: rgba(19, 28, 46, 0.95);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(64, 224, 208, 0.2);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-link.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Герой-секция */
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.9), rgba(30, 60, 114, 0.8));
+            border-radius: 20px;
+            margin: 40px 0;
+            border: 2px solid rgba(64, 224, 208, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #40e0d0, #20b2aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(64, 224, 208, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        /* Промокод на странице скачивания */
+        .download-promo {
+            background: linear-gradient(135deg, rgba(25, 55, 100, 0.9), rgba(10, 25, 47, 0.9));
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 2px solid rgba(64, 224, 208, 0.4);
+            text-align: center;
+        }
+        
+        .download-promo-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        
+        .promo-code-big {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            letter-spacing: 4px;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 3px dashed var(--primary-color);
+            display: inline-block;
+        }
+        
+        /* Платформы */
+        .platforms-section {
+            margin: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--text-light);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .platform-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 35px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .platform-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .platform-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .platform-icon {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+        
+        .platform-name {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+        
+        .platform-desc {
+            color: var(--text-gray);
+            margin-bottom: 25px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .platform-specs {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        .platform-specs li {
+            margin-bottom: 8px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Кнопки */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 54px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--primary-color), #20b2aa);
+            color: #0a0e17;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(64, 224, 208, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(64, 224, 208, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .btn-large {
+            padding: 20px 40px;
+            font-size: 1.2rem;
+        }
+        
+        /* Шаги установки */
+        .steps-section {
+            margin: 60px 0;
+        }
+        
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .step-card {
+            background: var(--card-bg);
+            padding: 35px 30px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            border: 1px solid rgba(64, 224, 208, 0.2);
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: #0a0e17;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: 4px solid var(--dark-bg);
+        }
+        
+        .step-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+        
+        .step-desc {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+        
+        /* Системные требования */
+        .requirements-section {
+            margin: 60px 0;
+        }
+        
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .requirement-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .requirement-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .requirement-list {
+            list-style: none;
+        }
+        
+        .requirement-list li {
+            margin-bottom: 10px;
+            color: var(--text-gray);
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .requirement-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        /* FAQ */
+        .faq-section {
+            margin: 60px 0;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+        
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .faq-question {
+            padding: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(40, 55, 85, 0.6);
+        }
+        
+        .faq-question:after {
+            content: '+';
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+        
+        .faq-item[open] .faq-question:after {
+            content: '-';
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 25px 25px;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+        
+        /* Футер */
+        .main-footer {
+            background: rgba(10, 15, 25, 0.95);
+            padding: 50px 0 30px;
+            margin-top: 80px;
+            border-top: 2px solid rgba(64, 224, 208, 0.2);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--text-light);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(19, 28, 46, 0.98);
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                border-top: 1px solid rgba(64, 224, 208, 0.2);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .promo-code-big {
+                font-size: 2.2rem;
+                padding: 15px;
+            }
+            
+            .platform-card, .step-card, .requirement-card {
+                padding: 25px 20px;
+            }
+            
+            .platform-icon {
+                font-size: 2.8rem;
+            }
+            
+            .btn {
+                padding: 14px 25px;
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .promo-code-big {
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+            }
+            
+            .platforms-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Уведомление */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(30, 40, 62, 0.95);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: 2px solid var(--primary-color);
+            z-index: 10000;
+            transform: translateX(150%);
+            transition: transform 0.3s ease;
+            max-width: 300px;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Уведомление -->
+    <div class="notification" id="notification"></div>
+
+    <!-- Навигация -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-diamond"></i>
+                Poker<span>OK</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i> Главная
+                </a>
+                <a href="promo.html" class="nav-link">
+                    <i class="fas fa-gift"></i> Промокод
+                </a>
+                <a href="download.html" class="nav-link active">
+                    <i class="fas fa-download"></i> Скачать
+                </a>
+                <a href="index.html#faq" class="nav-link">
+                    <i class="fas fa-question-circle"></i> FAQ
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Герой-секция -->
+        <section class="hero-section">
+            <h1 class="hero-title">Скачать PokerOK</h1>
+            <p class="hero-subtitle">
+                Официальный клиент для Windows, macOS, iOS и Android. Быстрая установка, 
+                полный функционал, играйте в любимый покер на любом устройстве.
+            </p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+                <a href="#platforms" class="btn btn-primary btn-large">
+                    <i class="fas fa-download"></i> Выбрать версию
+                </a>
+                <a href="promo.html" class="btn btn-secondary btn-large">
+                    <i class="fas fa-gift"></i> Получить промокод
+                </a>
+            </div>
+        </section>
+
+        <!-- Промокод на странице -->
+        <section class="download-promo">
+            <h2 class="download-promo-title">Не забудьте промокод для бонуса!</h2>
+            <p style="color: var(--text-gray); margin-bottom: 20px; font-size: 1.1rem;">
+                Используйте при регистрации после скачивания клиента
+            </p>
+            
+            <div class="promo-code-big">POKER2026</div>
+            
+            <div style="max-width: 400px; margin: 20px auto;">
+                <input type="text" readonly value="POKER2026" id="promoCodeInput" 
+                       style="width: 100%; padding: 15px; font-size: 1.3rem; text-align: center; 
+                              background: rgba(255,255,255,0.1); border: 2px solid var(--primary-color); 
+                              border-radius: 10px; color: white; margin-bottom: 15px;">
+                
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <button class="btn btn-primary" id="copyPromoBtn" style="flex: 1;">
+                        <i class="far fa-copy"></i> Скопировать
+                    </button>
+                    <a href="promo.html" class="btn btn-secondary" style="flex: 1;">
+                        <i class="fas fa-info-circle"></i> Подробнее
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Платформы -->
+        <section id="platforms" class="platforms-section">
+            <h2 class="section-title">Выберите вашу платформу</h2>
+            
+            <div class="platforms-grid">
+                <!-- Windows -->
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h3 class="platform-name">Windows</h3>
+                    <p class="platform-desc">
+                        Полнофункциональный клиент для Windows 10/11. 
+                        Оптимизирован для современных компьютеров.
+                    </p>
+                    
+                    <div class="platform-specs">
+                        <ul>
+                            <li>Windows 10/11 (64-bit)</li>
+                            <li>Процессор: Intel Core i3+</li>
+                            <li>ОЗУ: 4 GB минимум</li>
+                            <li>Место: 500 MB</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="https://pdlinkone.xyz/click/694a872d6bcc637bcb2f4842/4594/16630/subaccount?promocode=POKER2026" 
+                       class="btn btn-primary"
+                       target="_blank"
+                       rel="nofollow"
+                       onclick="trackDownload('windows')">
+                        <i class="fas fa-download"></i> Скачать для Windows
+                    </a>
+                </div>
+                
+                <!-- macOS -->
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h3 class="platform-name">macOS</h3>
+                    <p class="platform-desc">
+                        Нативный клиент для Mac. Полная интеграция с macOS, 
+                        высокая производительность.
+                    </p>
+                    
+                    <div class="platform-specs">
+                        <ul>
+                            <li>macOS 10.14+</li>
+                            <li>Процессор: Intel/Apple Silicon</li>
+                            <li>ОЗУ: 8 GB</li>
+                            <li>Место: 600 MB</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="https://pdlinkone.xyz/click/694a872d6bcc637bcb2f4842/4594/16630/subaccount?promocode=POKER2026" 
+                       class="btn btn-primary"
+                       target="_blank"
+                       rel="nofollow"
+                       onclick="trackDownload('macos')">
+                        <i class="fas fa-download"></i> Скачать для macOS
+                    </a>
+                </div>
+                
+                <!-- Android -->
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h3 class="platform-name">Android</h3>
+                    <p class="platform-desc">
+                        Мобильное приложение для смартфонов и планшетов. 
+                        Играйте в любом месте.
+                    </p>
+                    
+                    <div class="platform-specs">
+                        <ul>
+                            <li>Android 8.0+</li>
+                            <li>ОЗУ: 2 GB</li>
+                            <li>Место: 150 MB</li>
+                            <li>Экран: 5" минимум</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="https://pdlinkone.xyz/click/694a872d6bcc637bcb2f4842/4594/16630/subaccount?promocode=POKER2026" 
+                           class="btn btn-primary"
+                           target="_blank"
+                           rel="nofollow"
+                           onclick="trackDownload('android')">
+                            <i class="fas fa-download"></i> Скачать APK
+                        </a>
+                        <a href="https://pdlinkone.xyz/click/694a872d6bcc637bcb2f4842/4594/16630/subaccount?promocode=POKER2026" 
+                           class="btn btn-secondary"
+                           target="_blank"
+                           rel="nofollow">
+                            <i class="fab fa-google-play"></i> Google Play
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- iOS -->
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <i class="fab fa-app-store-ios"></i>
+                    </div>
+                    <h3 class="platform-name">iOS</h3>
+                    <p class="platform-desc">
+                        Приложение для iPhone и iPad. Оптимизировано под iOS, 
+                        удобный интерфейс.
+                    </p>
+                    
+                    <div class="platform-specs">
+                        <ul>
+                            <li>iOS 13.0+</li>
+                            <li>iPhone 8+ / iPad Air 2+</li>
+                            <li>Место: 200 MB</li>
+                            <li>Требуется iOS 13+</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="https://pdlinkone.xyz/click/694a872d6bcc637bcb2f4842/4594/16630/subaccount?promocode=POKER2026" 
+                       class="btn btn-primary"
+                       target="_blank"
+                       rel="nofollow"
+                       onclick="trackDownload('ios')">
+                        <i class="fab fa-app-store"></i> App Store
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Шаги установки -->
+        <section class="steps-section">
+            <h2 class="section-title">Простая установка за 4 шага</h2>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Скачайте клиент</h3>
+                    <p class="step-desc">
+                        Выберите версию для вашей операционной системы и начните загрузку
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Установите</h3>
+                    <p class="step-desc">
+                        Запустите установщик и следуйте инструкциям. Процесс займет 2-3 минуты
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Зарегистрируйтесь</h3>
+                    <p class="step-desc">
+                        Создайте аккаунт и введите промокод <strong>POKER2026</strong> для бонуса
+                    </p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Начните играть</h3>
+                    <p class="step-desc">
+                        Пополните счет и выберите игровой стол. Удачи за покерным столом!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Системные требования -->
+        <section class="requirements-section">
+            <h2 class="section-title">Системные требования</h2>
+            
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h3 class="requirement-title">
+                        <i class="fas fa-desktop"></i> Windows
+                    </h3>
+                    <ul class="requirement-list">
+                        <li>Операционная система: Windows 10/11 64-bit</li>
+                        <li>Процессор: Intel Core i3 или аналогичный AMD</li>
+                        <li>Оперативная память: 4 GB (рекомендуется 8 GB)</li>
+                        <li>Место на диске: 500 MB свободного пространства</li>
+                        <li>Интернет: стабильное подключение от 5 Мбит/с</li>
+                    </ul>
+                </div>
+                
+                <div class="requirement-card">
+                    <h3 class="requirement-title">
+                        <i class="fab fa-apple"></i> macOS
+                    </h3>
+                    <ul class="requirement-list">
+                        <li>Операционная система: macOS 10.14 или новее</li>
+                        <li>Процессор: Intel Core i5 или Apple Silicon</li>
+                        <li>Оперативная память: 8 GB</li>
+                        <li>Место на диске: 600 MB свободного пространства</li>
+                        <li>Разрешение экрана: 1280x720 минимум</li>
+                    </ul>
+                </div>
+                
+                <div class="requirement-card">
+                    <h3 class="requirement-title">
+                        <i class="fas fa-mobile-alt"></i> Мобильные
+                    </h3>
+                    <ul class="requirement-list">
+                        <li>Android: версия 8.0 или выше, 2 GB ОЗУ</li>
+                        <li>iOS: версия 13.0 или выше, iPhone 8 или новее</li>
+                        <li>Место: 150-200 MB свободной памяти</li>
+                        <li>Экран: минимум 4.5 дюймов</li>
+                        <li>Интернет: Wi-Fi или мобильная сеть 4G/5G</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2 class="section-title">Частые вопросы</h2>
+            
+            <div class="faq-container">
+                <details class="faq-item">
+                    <summary class="faq-question">Безопасно ли скачивать клиент PokerOK?</summary>
+                    <div class="faq-answer">
+                        Да, клиент PokerOK абсолютно безопасен. Все файлы проверяются антивирусными программами, 
+                        имеют цифровую подпись и скачиваются с официальных серверов. Рекомендуем скачивать только 
+                        с нашего сайта или официальных магазинов приложений.
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">Нужно ли вводить промокод при скачивании?</summary>
+                    <div class="faq-answer">
+                        Нет, промокод <strong>POKER2026</strong> нужно вводить при регистрации аккаунта после установки клиента. 
+                        Это отдельный этап, но мы рекомендуем скопировать промокод заранее, чтобы не забыть его ввести.
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">Можно ли играть без скачивания клиента?</summary>
+                    <div class="faq-answer">
+                        Да, доступна браузерная версия, но она имеет ограниченный функционал. Для полноценной игры 
+                        со всеми возможностями, участия в турнирах и использования всех функций рекомендуется 
+                        скачать и установить клиент.
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">Что делать если установка не запускается?</summary>
+                    <div class="faq-answer">
+                        1. Проверьте, что у вас достаточно прав администратора<br>
+                        2. Отключите антивирус на время установки (добавьте исключение)<br>
+                        3. Попробуйте запустить установщик от имени администратора<br>
+                        4. Убедитесь, что скачана правильная версия для вашей ОС
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">Как обновить клиент PokerOK?</summary>
+                    <div class="faq-answer">
+                        Клиент обычно обновляется автоматически при запуске. Если этого не происходит, 
+                        просто скачайте новую версию с нашего сайта и установите поверх старой. 
+                        Все ваши настройки и данные сохранятся.
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Призыв к действию -->
+        <section class="download-promo" style="margin-top: 60px;">
+            <h2 class="download-promo-title" style="font-size: 2.2rem;">Готовы начать играть?</h2>
+            <p style="color: var(--text-gray); margin-bottom: 30px; font-size: 1.2rem;">
+                Скачайте клиент, получите бонус по промокоду и присоединяйтесь к миллионам игроков PokerOK!
+            </p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#platforms" class="btn btn-primary btn-large">
+                    <i class="fas fa-download"></i> Скачать сейчас
+                </a>
+                <a href="promo.html" class="btn btn-secondary btn-large">
+                    <i class="fas fa-gift"></i> Получить промокод
+                </a>
+                <a href="index.html" class="btn btn-secondary btn-large">
+                    <i class="fas fa-home"></i> На главную
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PokerOK</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Главная страница</a></li>
+                        <li><a href="promo.html"><i class="fas fa-gift"></i> Промокод POKER2026</a></li>
+                        <li><a href="download.html"><i class="fas fa-download"></i> Скачать клиент</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#faq"><i class="fas fa-question-circle"></i> Частые вопросы</a></li>
+                        <li><a href="index.html#about"><i class="fas fa-info-circle"></i> Об игре</a></li>
+                        <li><a href="index.html#bonus"><i class="fas fa-star"></i> Бонусы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Скачать для</h3>
+                    <ul class="footer-links">
+                        <li><a href="download.html"><i class="fab fa-windows"></i> Windows</a></li>
+                        <li><a href="download.html"><i class="fab fa-apple"></i> macOS</a></li>
+                        <li><a href="download.html"><i class="fab fa-android"></i> Android</a></li>
+                        <li><a href="download.html"><i class="fab fa-apple"></i> iOS</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>PokerOK © <span id="currentYear">2024</span>. Играйте ответственно. 18+</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">
+                    Используйте промокод <strong style="color: var(--primary-color);">POKER2026</strong> при регистрации для получения бонуса
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Инициализация
+        document.addEventListener('DOMContentLoaded', function() {
+            // Установка текущего года
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Мобильное меню
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+                
+                // Закрытие меню при клике на ссылку
+                const navItems = navLinks.querySelectorAll('a');
+                navItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+            
+            // Копирование промокода
+            const copyPromoBtn = document.getElementById('copyPromoBtn');
+            const promoInput = document.getElementById('promoCodeInput');
+            
+            if (copyPromoBtn && promoInput) {
+                copyPromoBtn.addEventListener('click', async function() {
+                    try {
+                        await navigator.clipboard.writeText(promoInput.value);
+                        showNotification('Промокод скопирован!');
+                        
+                        // Визуальная обратная связь
+                        const originalText = copyPromoBtn.innerHTML;
+                        copyPromoBtn.innerHTML = '<i class="fas fa-check"></i> Скопировано!';
+                        copyPromoBtn.style.background = 'linear-gradient(90deg, #2ecc71, #27ae60)';
+                        
+                        setTimeout(() => {
+                            copyPromoBtn.innerHTML = originalText;
+                            copyPromoBtn.style.background = '';
+                        }, 2000);
+                        
+                    } catch (err) {
+                        // Резервный метод
+                        promoInput.select();
+                        document.execCommand('copy');
+                        showNotification('Промокод скопирован в буфер');
+                    }
+                });
+                
+                // Выделение при клике на поле
+                promoInput.addEventListener('click', function() {
+                    this.select();
+                });
+            }
+            
+            // Отслеживание скачиваний
+            const downloadLinks = document.querySelectorAll('a[onclick*="trackDownload"]');
+            downloadLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const platform = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                    trackDownload(platform);
+                });
+            });
+        });
+        
+        // Показать уведомление
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            if (!notification) return;
+            
+            notification.innerHTML = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+        
+        // Отслеживание скачиваний
+        function trackDownload(platform) {
+            console.log(`Скачивание для ${platform} отслежено`);
+            showNotification(`Начинается скачивание для ${getPlatformName(platform)}`);
+        }
+        
+        // Получить название платформы
+        function getPlatformName(code) {
+            const names = {
+                'windows': 'Windows',
+                'macos': 'macOS',
+                'android': 'Android',
+                'ios': 'iOS'
+            };
+            return names[code] || code;
+        }
+        
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

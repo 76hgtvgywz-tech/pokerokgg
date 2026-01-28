@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokerOK — Играйте на официальном сайте | ПокерОК, Покер ОК, pokerok-gg.buzz</title>
+    <meta name="description" content="PokerOK (ПокерОК) — Официальный сайт для игры в покер в России. Регистрируйтесь по промокоду POKER2026, получайте бонусы на первый депозит. Скачать клиент для ПК и мобильных.">
+    <meta name="keywords" content="покерок, покер ок, pokerok, poker ok, pokerok gg, gg poker, покерок казино, покерок онлайн, pokerok скачать, pokerok официальный сайт, ">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Стили для навигации -->
+    <style>
+        /* Главная навигация */
+        .main-navigation {
+            background: rgba(19, 28, 46, 0.95);
+            padding: 20px 0;
+            margin-bottom: 40px;
+            border-bottom: 2px solid rgba(64, 224, 208, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            color: #40e0d0;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-link:hover {
+            color: #40e0d0;
+        }
+        
+        .nav-link.active {
+            color: #40e0d0;
+            border-bottom: 2px solid #40e0d0;
+            padding-bottom: 5px;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Навигация по хлебным крошкам */
+        .breadcrumbs {
+            background: rgba(30, 40, 62, 0.7);
+            padding: 15px 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        
+        .breadcrumbs a {
+            color: #40e0d0;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumbs span {
+            color: #ffffff;
+            margin: 0 5px;
+        }
+        
+        .breadcrumbs .separator {
+            color: #666;
+            margin: 0 8px;
+        }
+        
+        /* Блоки перелинковки */
+        .interlinking-section {
+            background: rgba(30, 40, 62, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 50px 0;
+            border: 1px solid rgba(64, 224, 208, 0.2);
+        }
+        
+        .interlinking-title {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .interlinking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .interlinking-card {
+            background: rgba(40, 55, 85, 0.6);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(64, 224, 208, 0.1);
+        }
+        
+        .interlinking-card:hover {
+            transform: translateY(-5px);
+            border-color: #40e0d0;
+        }
+        
+        .interlinking-icon {
+            font-size: 2.5rem;
+            color: #40e0d0;
+            margin-bottom: 15px;
+        }
+        
+        .interlinking-card h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .interlinking-card p {
+            color: #cccccc;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Мобильная адаптация навигации */
+        @media (max-width: 768px) {
+            .main-navigation {
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(19, 28, 46, 0.98);
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                border-top: 1px solid rgba(64, 224, 208, 0.2);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .breadcrumbs {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .interlinking-section {
+                padding: 25px 20px;
+                margin: 40px 0;
+            }
+            
+            .interlinking-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Анимированный фон -->
+    <div class="falling-bg" id="fallingBackground"></div>
+
+    <!-- Главная навигация -->
+    <nav class="main-navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-diamond" style="color: #40e0d0;"></i>
+                Poker<span>OK</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i> Главная
+                </a>
+                <a href="promo.html" class="nav-link">
+                    <i class="fas fa-gift"></i> Промокод
+                </a>
+                <a href="download.html" class="nav-link">
+                    <i class="fas fa-download"></i> Скачать
+                </a>
+                <a href="#faq" class="nav-link">
+                    <i class="fas fa-question-circle"></i> FAQ
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span class="separator">/</span>
+            <span>Играть в онлайн покер</span>
+        </div>
+
+        <!-- Заголовок и кнопки -->
+        <section class="hero-section">
+            <h1 class="main-title">Poker<span class="highlight">OK</span></h1>
+            <p class="tagline">Официальный покер-рум для игроков из России и СНГ. Играйте в ПокерОК онлайн!</p>
+            
+            <div class="cta-buttons">
+                <a href="https://pdlinkone.xyz/click/694a872d6bcc637bcb2f4842/4594/16630/subaccount?promocode=POKER2026" class="btn btn-primary" target="_blank" rel="nofollow">
+                    <i class="fas fa-play-circle"></i> Играть сейчас
+                </a>
+                <a href="promo.html" class="btn btn-secondary">
+                    <i class="fas fa-gift"></i> Получить бонус
+                </a>
+                <a href="download.html" class="btn btn-secondary">
+                    <i class="fas fa-download"></i> Скачать клиент
+                </a>
+            </div>
+            
+            <!-- Промокод под кнопками -->
+            <div class="promo-section" style="margin-top: 40px; text-align: center;">
+                <h3 style="color: #ffffff; margin-bottom: 15px; font-size: 1.3rem;">
+                    <i class="fas fa-tag" style="color: #40e0d0; margin-right: 8px;"></i> 
+                    Ваш промокод: <span style="color: #40e0d0; font-weight: bold;">POKER2026</span>
+                </h3>
+                <p style="color: #aaa; font-size: 1rem;">
+                    Используйте при регистрации для увеличенного бонуса
+                    <a href="promo.html" style="color: #40e0d0; margin-left: 10px;">Подробнее →</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Секция перелинковки -->
+        <section class="interlinking-section">
+            <h2 class="interlinking-title">Все о PokerOK в одном месте</h2>
+            
+            <div class="interlinking-grid">
+                <div class="interlinking-card">
+                    <div class="interlinking-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Эксклюзивный промокод</h3>
+                    <p>Получите увеличенный бонус на первый депозит с промокодом POKER2026</p>
+                    <a href="promo.html" class="btn btn-primary" style="padding: 12px 25px;">
+                        <i class="fas fa-arrow-right"></i> Получить промокод
+                    </a>
+                </div>
+                
+                <div class="interlinking-card">
+                    <div class="interlinking-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Скачать клиент</h3>
+                    <p>Официальный клиент для Windows, macOS, iOS и Android. Быстрая установка</p>
+                    <a href="download.html" class="btn btn-primary" style="padding: 12px 25px;">
+                        <i class="fas fa-arrow-right"></i> Скачать бесплатно
+                    </a>
+                </div>
+                
+                <div class="interlinking-card">
+                    <div class="interlinking-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Как начать играть</h3>
+                    <p>Пошаговая инструкция по регистрации, депозиту и выбору игрового стола</p>
+                    <a href="#about" class="btn btn-secondary" style="padding: 12px 25px;">
+                        <i class="fas fa-arrow-right"></i> Узнать больше
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Об игре" с перелинковкой -->
+       <section class="pokerok-content">
+           
+    <h1>PokerOK (ПокерОк): Официальный сайт (Рабочее зеркало) регистрируйся и забери бонус 100% на депозит, 100% на покер и 1000 фриспинов по промокоду POKER2026</h1>
+
+    <p>Если вы ищете по-настоящему качественную, честную и насыщенную событиями платформу для игры в покер, то вы на правильном пути. <strong>PokerOK</strong> (также известный в сообществе как <strong>ПокерОК</strong>) – это не просто еще одна площадка, а ведущая международная платформа, созданная с глубоким пониманием потребностей русскоязычных игроков. Когда пользователи вводят в поиск запросы вроде <strong>«gg pokerok»</strong> или «pokerok gg», они интуитивно ищут тот самый уровень сервиса, который предлагает этот бренд. И они находят его здесь: адаптированный интерфейс, поддержку на родном языке, удобные способы пополнения счета и, что самое главное, геймплей мирового класса.</p>
+
+    <h2>Вход на официальный сайт и зеркала</h2>
+    <p>Первым и главным шагом на этом пути является вход на <a href="#" title="Перейти на официальный сайт PokerOK"><strong>pokerok официальный сайт</strong></a>. Именно здесь начинается ваше покерное приключение. Современный, интуитивно понятный дизайн сайта позволяет легко сориентироваться, будь вы новичок или опытный игрок. На главной странице вас ждет актуальная информация о самых горячих турнирах, щедрых акциях и стартующих состязаниях. Но что делать, если доступ к основному домену временно затруднен? Для таких случаев у платформы есть надежное <a href="#" title="Актуальное зеркало PokerOK"><strong>pokerok зеркало</strong></a> – альтернативный адрес, который обеспечивает бесперебойный доступ ко всем функциям и играм. Актуальные зеркала всегда можно найти в официальных телеграм-каналах сообщества или запросить у службы поддержки. Кроме того, для постоянного доступа многие игроки предпочитают сразу <a href="#" title="Скачать клиент PokerOK"><strong>скачать pokerok</strong></a> клиент на свое устройство.</p>
+
+    <h2>Играть в покер онлайн на PokerOK: разнообразие, драйв и большие победы</h2>
+    <p>Ядро платформы – это, конечно же, покер. <strong>PokerOK</strong> предлагает невероятно широкую палитру игр и форматов, удовлетворив запросы любого, даже самого взыскательного игрока. Любители классики могут с головой окунуться в бесконечные столы с Техасским Холдемом и Омахой, где есть лимиты на любой банкролл – от микро до высоких. Для ценителей адреналина и быстрых результатов созданы популярные форматы вроде <strong>Spin & Go</strong>, где за считанные минуты можно сорвать солидный куш, или динамичных Кэш-игр.</p>
+
+    <p>Особой гордостью площадки является турнирная сетка. Ежедневно стартуют сотни событий с гарантированными призовыми фондами, которые часто превышают заявленные! От ежечасных <a href="#" title="Фрироллы PokerOK"><strong>pokerok фрироллы</strong></a>, которые отлично подходят для тренировки и старта без вложений, до масштабных воскресных турниров с миллионными гарантиями – скучно не будет никогда. Кстати, о <strong>pokerok фрироллы</strong> – это отличный шанс для новичков почувствовать вкус победы и набраться опыта без риска для собственных средств. Следите за расписанием на сайте, они запускаются регулярно.</p>
+
+    <p>Но <strong>PokerOK</strong> – это больше чем просто покер-рум. Для тех, кто любит разнообразие, на платформе представлен полноценный раздел <a href="#" title="PokerOK Казино"><strong>pokerok casino</strong></a>. Здесь собраны сотни современных слотов от лучших провайдеров, настольные игры (блэкджек, рулетка, баккара), а также live-казино с реальными дилерами, транслирующими игру в прямом эфире из студий. Это позволяет в один клик переключиться с тактического покерного противостояния на удачу и азарт классических казино-игр. Для доступа к казино также можно использовать <a href="#" title="Зеркало для казино PokerOK"><strong>pokerok casino зеркало</strong></a>, если возникли трудности с основным сайтом.</p>
+
+    <h2>Максимальное удобство: клиенты и мобильная игра</h2>
+    <p>Платформа понимает, что современный игрок должен иметь доступ к своим любимым играм в любое время и в любом месте. Поэтому играть можно как на стационарном компьютере, так и на смартфоне или планшете.</p>
+
+    <ul>
+        <li><strong>Для ПК:</strong> Самый функциональный вариант – <a href="#" title="Скачать PokerOK на компьютер"><strong>скачать pokerok на пк</strong></a>. Стационарный клиент обеспечивает максимальную стабильность соединения, расширенную многозадачность (возможность игры за несколькими столами одновременно) и полный набор статистических функций для анализа своей игры.</li>
+        <li><strong>Для мобильных устройств:</strong> <strong>Pokerok мобильная версия</strong> – это мощное, но легкое приложение, которое предоставляет почти весь функционал десктопного клиента. Вы можете участвовать в турнирах, играть кэш-игры и наслаждаться слотами прямо в дороге или с дивана. Скачать приложение можно прямо с <strong>официального сайта pokerok</strong> для iOS и Android.</li>
+    </ul>
+
+    <h2>Безопасность, поддержка и честная игра</h2>
+    <p>Доверие игроков – главный актив <strong>PokerOK</strong>. Платформа работает под лицензией Кюрасао, использует современные алгоритмы шифрования (SSL) для защиты данных и финансовых транзакций. Система рандом-генератора чисел (RNG) прошла независимые аудиты, что гарантирует абсолютную честность и непредсказуемость раздач как в покере, так и в <strong>pokerok казино</strong>.</p>
+    <p>Если у вас возникнут любые вопросы, на помощь придет оперативная служба поддержки на русском языке. Специалисты готовы помочь 24/7 через онлайн-чат на сайте или по электронной почте. Это касается и помощи с <a href="#" title="Регистрация на PokerOK"><strong>pokerok регистрация</strong></a>, и восстановления доступа, и консультаций по правилам акций.</p>
+
+    <h2>Как начать? Всего несколько шагов!</h2>
+    <ol>
+        <li><strong>Регистрация:</strong> Пройдите быструю <strong>pokerok регистрация</strong> на сайте или в клиенте. Укажите достоверные данные – это важно для последующего вывода выигрышей.</li>
+        <li><strong>Вход:</strong> Используйте созданный логин и пароль для входа на <a href="#" title="PokerOK com"><strong>pokerok com</strong></a> или через зеркало.</li>
+        <li><strong>Пополнение счета:</strong> Выберите удобный способ из множества доступных (банковские карты, электронные кошелки, криптовалюта) и сделайте первый депозит.</li>
+        <li><strong>Выбор игры:</strong> Откройте лобби покера или казино, найдите подходящий стол или турнир и сделайте первую ставку!</li>
+    </ol>
+
+    <p><strong>PokerOK</strong> – это целая экосистема для любителей азартных интеллектуальных игр и качественных развлечений. Это место, где начинается ваша история побед. Не упускайте свой шанс – присоединяйтесь к сообществу уже сегодня!</p>
+</section>
+
+        <!-- Секция "Как играть?" с перелинковкой -->
+        <section class="section">
+            <h2 class="section-title">Как играть в покер на PokerOK?</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon">1</div>
+                    <h3>Регистрация в PokerOK</h3>
+                    <p>Создайте аккаунт на официальном сайте <strong>PokerOK</strong>. Для получения максимального бонуса не забудьте указать <a href="promo.html" class="inline-link">промокод POKER2026</a>.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">2</div>
+                    <h3>Скачать клиент</h3>
+                    <p><a href="download.html">Скачайте официальный клиент</a> для вашей операционной системы. Установка занимает 2-3 минуты.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">3</div>
+                    <h3>Пополнение счета</h3>
+                    <p>Выберите удобный способ депозита. Используйте бонус от промокода для увеличения стартового капитала.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">4</div>
+                    <h3>Начать играть</h3>
+                    <p>Выберите игровой стол, турнир или быстрый формат. Применяйте стратегию и выигрывайте!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Промокод и бонусы" с перелинковкой -->
+        <section class="section highlight-section" id="bonus">
+            <h2 class="section-title">Бонусная программа PokerOK</h2>
+            <div class="content-card text-center">
+                <p>PokerOK предлагает одну из самых щедрых бонусных программ среди покер-румов. Используйте промокод <strong>POKER2026</strong> при регистрации, чтобы получить:</p>
+                
+                <div class="steps-grid" style="margin-top: 30px;">
+                    <div class="step-card">
+                        <div class="step-icon"><i class="fas fa-money-bill-wave"></i></div>
+                        <h3>Бонус на депозит</h3>
+                        <p>Увеличенный приветственный бонус до 100% от первого депозита.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon"><i class="fas fa-ticket-alt"></i></div>
+                        <h3>Турнирные билеты</h3>
+                        <p>Бесплатные входы в эксклюзивные турниры и фрироллы.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon"><i class="fas fa-star"></i></div>
+                        <h3>Повышенный рейкбек</h3>
+                        <p>Специальные условия по программе лояльности.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 40px;">
+                    <a href="promo.html" class="btn btn-primary btn-large" style="margin-right: 20px;">
+                        <i class="fas fa-external-link-alt"></i> Подробнее о промокоде
+                    </a>
+                    <a href="download.html" class="btn btn-secondary btn-large">
+                        <i class="fas fa-download"></i> Скачать клиент
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция FAQ с перелинковкой -->
+        <section class="section" id="faq">
+            <h2 class="section-title">Часто задаваемые вопросы (FAQ) про PokerOK</h2>
+            <div class="faq-container">
+                <details class="faq-item">
+                    <summary class="faq-question">1. Как скачать клиент PokerOK?</summary>
+                    <p class="faq-answer">
+                        Скачать клиент можно бесплатно на <a href="download.html">странице загрузки</a>. Доступны версии для Windows, macOS, iOS и Android.
+                    </p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">2. Как получить бонус при регистрации?</summary>
+                    <p class="faq-answer">
+                        Используйте промокод <strong>POKER2026</strong> при создании аккаунта. Подробная инструкция на <a href="promo.html">странице промокода</a>.
+                    </p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">3. На каких устройствах можно играть?</summary>
+                    <p class="faq-answer">
+                        Играть можно на ПК (Windows, macOS), а также на мобильных устройствах (iOS, Android). <a href="download.html">Скачайте клиент</a> для вашего устройства.
+                    </p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">4. Как быстро проходят выплаты?</summary>
+                    <p class="faq-answer">
+                        Вывод средств обрабатывается в течение 24 часов. Электронные кошельки — до нескольких часов, банковские карты — 1-5 банковских дней.
+                    </p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-question">5. Можно ли играть бесплатно?</summary>
+                    <p class="faq-answer">
+                        Да, доступны фрироллы (турниры с бесплатным входом) и демо-режим для обучения.
+                    </p>
+                </details>
+            </div>
+            
+            <div class="text-center" style="margin-top: 40px;">
+                <p style="color: #b0b0b0; font-size: 1.1rem; margin-bottom: 20px;">
+                    Остались вопросы? Посетите другие страницы нашего сайта:
+                </p>
+                <div class="cta-buttons">
+                    <a href="promo.html" class="btn btn-secondary">
+                        <i class="fas fa-gift"></i> Страница промокода
+                    </a>
+                    <a href="download.html" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Страница скачивания
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер с навигацией -->
+    <footer class="footer">
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 25px;">
+                <div class="footer-column">
+                    <h4 style="color: #ffffff; margin-bottom: 15px;">Навигация</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" style="color: #40e0d0;">Главная</a></li>
+                        <li><a href="promo.html" style="color: #40e0d0;">Промокод</a></li>
+                        <li><a href="download.html" style="color: #40e0d0;">Скачать клиент</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 style="color: #ffffff; margin-bottom: 15px;">Информация</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html#about" style="color: #40e0d0;">Об игре</a></li>
+                        <li><a href="index.html#bonus" style="color: #40e0d0;">Бонусы</a></li>
+                        <li><a href="index.html#faq" style="color: #40e0d0;">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 style="color: #ffffff; margin-bottom: 15px;">Полезное</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="promo.html" style="color: #40e0d0;">Промокод POKER2026</a></li>
+                        <li><a href="download.html" style="color: #40e0d0;">Скачать для Windows</a></li>
+                        <li><a href="download.html" style="color: #40e0d0;">Скачать для Android</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; padding-top: 25px; border-top: 1px solid rgba(64, 224, 208, 0.2);">
+                <p>PokerOK © <span id="currentYear">2024</span>. Все права защищены. Играйте ответственно. 18+</p>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #888;">
+                    Официальный партнер покер-рума PokerOK. 
+                    <a href="promo.html" style="color: #40e0d0;">Промокод POKER2026</a> | 
+                    <a href="download.html" style="color: #40e0d0;">Скачать клиент</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипт для мобильного меню -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Мобильное меню
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Установка текущего года
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Закрытие мобильного меню при клике на ссылку
+            const navLinksItems = document.querySelectorAll('.nav-link');
+            navLinksItems.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- Основной скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>
