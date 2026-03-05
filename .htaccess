@@ -1,5 +1,5 @@
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^pokerokgg\.vercel.app$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^www\.pokerokgg\.vercel.app$ [NC]
-
 RewriteRule ^(.*)$ https://pokerok1.vercel.app/$1 [R=301,L,NE,QSA]
+
