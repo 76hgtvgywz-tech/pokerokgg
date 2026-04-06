@@ -2,8 +2,14 @@
   "redirects": [
     {
       "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "pokerokgg.vercel.app"
+        }
+      ],
       "destination": "https://pokerok07.vercel.app/$1",
-      "statusCode": 301
+      "permanent": true
     }
   ]
 }
